@@ -6,14 +6,15 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "hms project",
+  // database: "hms project",
+  database: "hms",
 });
 
 con.connect(function (err) {
   if (err) {
     throw err;
   } else {
-    console.log("you are connected");
+    console.log("you are connected to database");
   }
 });
 
@@ -32,7 +33,7 @@ module.exports.signup = function (username, email, password, status, callback) {
 };
 
 module.exports.getuserid = function (email, callback) {
-  var query = "select *from verify where email = '" + email + "' ";
+  var query = "select * from verify where email = '" + email + "' ";
   con.query(query, callback);
 };
 

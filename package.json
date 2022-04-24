@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node server",
+    "dev" : "nodemon server"
   },
   "license": "ISC",
   "dependencies": {
@@ -25,5 +27,8 @@
     "random-token": "0.0.8",
     "socket.io": "^2.3.0",
     "sweetalert2": "^9.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

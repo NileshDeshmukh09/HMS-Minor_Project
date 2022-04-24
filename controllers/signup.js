@@ -68,12 +68,12 @@ router.post(
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "",
-          pass: "",
+          user: "nileshdeshmukh092000@gmail.com",
+          pass: "9158667447",
         },
       });
       var mailOptions = {
-        from: "",
+        from: "nileshdeshmukh092000@gmail.com",
         to: email,
         subject: "Email Verification", // Subject line
         html: output, // plain text body
