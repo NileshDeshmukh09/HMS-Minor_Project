@@ -68,6 +68,7 @@ router.post(
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
+          // Authentication for the ADMIN to send the Email.
           user: "nileshdeshmukh092000@gmail.com",
           pass: "9158667447",
         },
@@ -86,7 +87,9 @@ router.post(
         console.log(info);
       });
 
-      res.send("Check you email for token to verify");
+      res.status(200).send({
+        message : "Check you email for token to verify"
+      });
     });
 
     // res.redirect('login');
