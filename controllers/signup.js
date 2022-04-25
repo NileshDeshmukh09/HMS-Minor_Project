@@ -1,18 +1,20 @@
 var express = require("express");
+const { check, validationResult } = require("express-validator");
 var router = express.Router();
 var bodyParser = require("body-parser");
 var db = require.main.require("./models/db_controller");
 var mysql = require("mysql");
 var nodemailer = require("nodemailer");
 var randomToken = require("random-token");
-const { check, validationResult } = require("express-validator");
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
+
 router.get("/", function (req, res) {
   res.render("signup.ejs");
 });
+
 
 router.post(
   "/",
@@ -21,6 +23,7 @@ router.post(
     check("password").notEmpty().withMessage("Password is required"),
     check("email").notEmpty().isEmail().withMessage("Valid Email required"),
   ],
+
   function (req, res) {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -73,6 +76,7 @@ router.post(
           pass: "9158667447",
         },
       });
+      
       var mailOptions = {
         from: "nileshdeshmukh092000@gmail.com",
         to: email,

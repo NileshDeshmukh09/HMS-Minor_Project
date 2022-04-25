@@ -308,7 +308,7 @@ module.exports.deleteappointment = function (id, callback) {
 //module.exports =router;
 
 module.exports.findOne = function (email, callback) {
-  var query = "select *from users where email='" + email + "'";
+  var query = "select * from users where email='" + email + "'";
   con.query(query, callback);
   console.log(query);
 };

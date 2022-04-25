@@ -1,5 +1,5 @@
 var express = require('express');
-var flash = require ('flash');
+var flash = require('flash');
 var router = express.Router();
 var bodyParser = require('body-parser');
 //var async = require ('async');
@@ -44,15 +44,15 @@ router.post('/',function(req,res){
         var transporter = nodemailer.createTransport({
             service : 'gmail',
             auth: {
-                user: '',
-                pass: ''
+                user: 'nileshdeshmukh092000@gmail.com',
+                pass: '9158667447'
             }
 
         });
 
         var mailOptions = {
-
-            from: 'zihad.24bd@gmail.com', // sender address
+            // from : 'zihad.24bd@gmail.com'
+            from: 'nileshdeshmukh092000@gmail.com', // sender address
             to: email, // list of receivers
             subject: 'Password Reset', // Subject line
             html: output// plain text body

@@ -48,9 +48,11 @@ router.post('/',[
         return response.status(422).json({ errors: errors.array() });
       }
 
+
     var username = request.body.username;
     var password = request.body.password;
 
+    
     if (username && password){
         con.query('select * from users where username = ? and password = ?' , [username, password], function(error , results , fields){
             if (results.length > 0){
