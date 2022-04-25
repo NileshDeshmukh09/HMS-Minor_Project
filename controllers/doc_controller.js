@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var multer = require ('multer');
+var multer = require ('multer'); // Middleware use for uploading files
 var fs = require ('fs');
 var path = require ('path');
 
@@ -26,7 +26,6 @@ var storage = multer.diskStorage({
     filename: function(req, file, cb) {
       console.log(file); //log the file object info in console
       cb(null, file.originalname);//here we specify the file saving name. in this case. 
-  //i specified the original file name .you can modify this name to anything you want
     }
   });
 
