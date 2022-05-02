@@ -23,9 +23,13 @@ router.post('/',function(req,res){
     var name = req.body.name;
     var email = req.body.email;
     var subject = req.body.subject;
-
+    console.log(name , "has Complained !");
     db.postcomplain(message,name,email,subject,function(err,result){
-        res.redirect('back');
+        
+        // res.redirect('back');
+        res.status(200).send({
+            message : "Compained Registered Successfully !",
+        })
     });
 
 });
