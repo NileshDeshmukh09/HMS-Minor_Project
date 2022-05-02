@@ -37,7 +37,7 @@ CREATE TABLE `appointment` (
   `time` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `appointment`
